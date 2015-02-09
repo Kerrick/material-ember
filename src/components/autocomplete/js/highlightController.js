@@ -6,7 +6,7 @@
 
   function MdHighlightCtrl ($scope, $element, $interpolate) {
     var term = $element.attr('md-highlight-text'),
-        text = $interpolate($element.text())($scope.$parent);
+        text = $interpolate($element.text())($scope);
     $scope.$watch(term, function (term) {
       var regex = new RegExp('^' + sanitize(term), 'i'),
           html = text.replace(regex, '<span class="highlight">$&</span>');

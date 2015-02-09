@@ -19,6 +19,8 @@
         cache    = {};
 
     //-- public variables
+    self.scope    = $scope;
+    self.parent   = $scope.$parent;
     self.itemName = itemParts[0];
     self.matches  = [];
     self.loading  = false;
